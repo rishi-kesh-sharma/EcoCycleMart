@@ -1,7 +1,7 @@
 {
   "name": "ecocyclemart",
   "version": "1.0.0",
-  "description": "@copyright by becodemy 2023",
+  "description": "@copyright by Rishikesh Sharma 2023",
   "main": "index.js",
   "scripts": {
     "start:all": "concurrently  -n \"BACKEND,SOCKET,FRONTEND\" -c \"green,blue,magenta\"   \" npm run start:backend \"  \" npm run start:socket \" \" npm run start:frontend \" ",

@@ -30,7 +30,7 @@ const CreateProduct = () => {
       navigate("/dashboard");
       window.location.reload();
     }
-  }, [dispatch, error, success]);
+  }, [dispatch, error, navigate, success]);
 
   const handleImageChange = (e) => {
     const files = Array.from(e.target.files);
@@ -94,6 +94,8 @@ const CreateProduct = () => {
             type="text"
             name="name"
             value={name}
+            minLength={3}
+            maxLength={30}
             className="mt-2 appearance-none block w-full px-3 h-[50px] border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             onChange={(e) => setName(e.target.value)}
             placeholder="Enter your product name..."
@@ -105,6 +107,8 @@ const CreateProduct = () => {
             Description <span className="text-red-500">*</span>
           </label>
           <textarea
+            minLength={10}
+            maxLength={200}
             cols="30"
             required
             rows="8"
@@ -121,6 +125,7 @@ const CreateProduct = () => {
             Category <span className="text-red-500">*</span>
           </label>
           <select
+            required
             className="w-full mt-2 border h-[50px] rounded-[5px]"
             value={category}
             onChange={(e) => setCategory(e.target.value)}>
@@ -137,6 +142,9 @@ const CreateProduct = () => {
         <div>
           <label className="pb-2">Tags</label>
           <input
+            required
+            minLength={3}
+            maxLength={100}
             type="text"
             name="tags"
             value={tags}
@@ -149,8 +157,11 @@ const CreateProduct = () => {
         <div>
           <label className="pb-2">Original Price</label>
           <input
+            required
             type="number"
-            name="price"
+            name="originalPrice"
+            min={50}
+            max={200000}
             value={originalPrice}
             className="mt-2 appearance-none block w-full px-3 h-[50px] border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             onChange={(e) => setOriginalPrice(e.target.value)}
@@ -163,8 +174,11 @@ const CreateProduct = () => {
             Price (With Discount) <span className="text-red-500">*</span>
           </label>
           <input
+            required
             type="number"
-            name="price"
+            name="discountPrice"
+            min={50}
+            max={200000}
             value={discountPrice}
             className="mt-2 appearance-none block w-full px-3 h-[50px] border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             onChange={(e) => setDiscountPrice(e.target.value)}
@@ -177,8 +191,11 @@ const CreateProduct = () => {
             Product Stock <span className="text-red-500">*</span>
           </label>
           <input
+            required
+            max={10000}
+            min={1}
             type="number"
-            name="price"
+            name="stock"
             value={stock}
             className="mt-2 appearance-none block w-full px-3 h-[50px] border border-gray-300 rounded-[3px] placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             onChange={(e) => setStock(e.target.value)}

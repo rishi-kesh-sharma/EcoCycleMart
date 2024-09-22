@@ -160,7 +160,9 @@ const ShippingInfo = ({
           <div className="w-[50%]">
             <label className="block pb-2 font-[500]">Phone Number</label>
             <input
-              type="number"
+              type="text"
+              onKeyPress="if(this.value.length<5 && this.value.length>6) return false;"
+              pattern="(\+977)?[9][6-9]\d{8}"
               required
               value={user && user.phoneNumber}
               className={`${styles.input} !w-[90%]`}
@@ -169,6 +171,7 @@ const ShippingInfo = ({
           <div className="w-[50%]">
             <label className="block pb-2 font-[500]">Zip Code</label>
             <input
+              onKeyPress="if(this.value.length<9 && this.value.length>10) return false;"
               type="number"
               value={zipCode}
               onChange={(e) => setZipCode(e.target.value)}

@@ -94,7 +94,7 @@ const Login = () => {
                 )}
               </div>
             </div>
-            <div className={`${styles.noramlFlex} justify-between`}>
+            {/* <div className={`${styles.noramlFlex} justify-between`}>
               <div className={`${styles.noramlFlex}`}>
                 <input
                   type="checkbox"
@@ -115,7 +115,7 @@ const Login = () => {
                   Forgot your password?
                 </a>
               </div>
-            </div>
+            </div> */}
             <div>
               <button
                 type="submit"
@@ -124,7 +124,7 @@ const Login = () => {
               </button>
             </div>
             <div className={`${styles.noramlFlex} w-full`}>
-              <h4>Not have any account?</h4>
+              <h4>Don&apos;t have any account?</h4>
               <Link to="/sign-up" className="text-primary-600 pl-2">
                 Sign Up
               </Link>

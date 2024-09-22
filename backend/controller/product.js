@@ -29,7 +29,16 @@ router.post(
         } else {
           images = req.body.images;
         }
+        console.log(req.body, "product");
 
+        if (req.body.discountPrice > req.body.originalPrice) {
+          return next(
+            new ErrorHandler(
+              "Discount Price cannot be greater than actual price",
+              400
+            )
+          );
+        }
         const imagesLinks = [];
 
         for (let i = 0; i < images.length; i++) {
@@ -102,6 +111,7 @@ router.delete(
   catchAsyncErrors(async (req, res, next) => {
     try {
       const product = await Product.findById(req.params.id);
+      console.log(product, "the product");
 
       if (!product) {
         return next(new ErrorHandler("Product is not found with this id", 404));
@@ -113,7 +123,7 @@ router.delete(
         );
       }
 
-      await product.remove();
+      await Product.findByIdAndDelete(product._id);
 
       res.status(201).json({
         success: true,

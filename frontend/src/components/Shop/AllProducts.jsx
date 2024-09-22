@@ -16,9 +16,10 @@ const AllProducts = () => {
 
   useEffect(() => {
     dispatch(getAllProductsShop(seller._id));
-  }, [dispatch]);
+  }, [dispatch, seller._id]);
 
   const handleDelete = (id) => {
+    console.log(id, "product id");
     dispatch(deleteProduct(id));
     window.location.reload();
   };

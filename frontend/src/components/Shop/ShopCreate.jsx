@@ -51,8 +51,6 @@ const ShopCreate = () => {
   const handleFileInputChange = (e) => {
     const reader = new FileReader();
 
-    console.log(e.target.files[0], "avatar image");
-
     reader.onload = () => {
       if (reader.readyState === 2) {
         setAvatar(reader.result);
@@ -91,6 +89,8 @@ const ShopCreate = () => {
               </label>
               <div className="mt-1">
                 <input
+                  minLength={3}
+                  maxLength={25}
                   type="name"
                   name="name"
                   required
@@ -103,14 +103,17 @@ const ShopCreate = () => {
 
             <div>
               <label
-                htmlFor="email"
+                htmlFor="phone-number"
                 className="block text-sm font-medium text-gray-700">
                 Phone Number
               </label>
               <div className="mt-1">
                 <input
-                  type="number"
+                  type="text"
                   name="phone-number"
+                  // minLength={9}
+                  onKeyPress="if(this.value.length<9 && this.value.length>10) return false;"
+                  pattern="(\+977)?[9][6-9]\d{8}"
                   required
                   value={phoneNumber}
                   onChange={(e) => setPhoneNumber(e.target.value)}
@@ -146,6 +149,8 @@ const ShopCreate = () => {
               </label>
               <div className="mt-1">
                 <input
+                  minLength={3}
+                  maxLength={25}
                   type="address"
                   name="address"
                   required
@@ -164,7 +169,10 @@ const ShopCreate = () => {
               </label>
               <div className="mt-1">
                 <input
-                  type="number"
+                  minLength={4}
+                  maxLength={6}
+                  type="text"
+                  pattern="^\d{4,6}$"
                   name="zipcode"
                   required
                   value={zipCode}
@@ -226,7 +234,7 @@ const ShopCreate = () => {
                   <label
                     htmlFor="avatar"
                     className="ml-5 flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-secondary">
-                    <span>Upload a file</span>
+                    <span>Upload Photo</span>
                     <input
                       type="file"
                       name="avatar"

@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { React, useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import styles from "../../styles/styles";
 import { Link, useNavigate } from "react-router-dom";
@@ -93,7 +93,7 @@ const ShopLogin = () => {
                 )}
               </div>
             </div>
-            <div className={`${styles.noramlFlex} justify-between`}>
+            {/* <div className={`${styles.noramlFlex} justify-between`}>
               <div className={`${styles.noramlFlex}`}>
                 <input
                   type="checkbox"
@@ -114,7 +114,7 @@ const ShopLogin = () => {
                   Forgot your password?
                 </a>
               </div>
-            </div>
+            </div> */}
             <div>
               <button
                 type="submit"

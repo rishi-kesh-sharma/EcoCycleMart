@@ -8,7 +8,7 @@
     "start:backend": "npm --prefix ./backend/ run start ",
     "start:socket": "npm --prefix ./socket/ run start ",
     "start:frontend": "npm --prefix ./frontend run start ",
-    "seed:json":"node faker/product.js",
+    "seed:json": "node faker/product.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +26,7 @@
     "concurrently": "^8.2.2"
   },
   "dependencies": {
-    "@faker-js/faker": "^8.4.1"
+    "@faker-js/faker": "^8.4.1",
+    "react-chatbotify": "^1.7.0"
   }
 }

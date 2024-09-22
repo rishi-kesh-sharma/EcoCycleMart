@@ -1,42 +1,69 @@
 [
-    {
-        "value": "Personal Care > Bath & Body > Hand Soaps",
-        "count": 138
-    },
-    {
-        "value": "Premium Beauty > Premium Makeup > Premium Nail Polish & Care > Premium Nail Polish",
-        "count": 136
-    },
-    {
-        "value": "Personal Care > Bath & Body > Body Lotions & Creams",
-        "count": 130
-    },
-    {
-        "value": "Beauty > Makeup > Nails",
-        "count": 105
-    },
-    {
-        "value": "Personal Care > Incontinence > All Incontinence",
-        "count": 105
-    },
-    {
-        "value": "Personal Care > Bath & Body > Body Wash & Shower Gel",
-        "count": 91
-    },
-    {
-        "value": "Personal Care > Feminine Care > All Feminine Care",
-        "count": 79
-    },
-    {
-        "value": "Health > Aromatherapy > Aromatherapy",
-        "count": 74
-    },
-    {
-        "value": "Personal Care > Sun Care > Sunscreen",
-        "count": 72
-    },
-    {
-        "value": "Premium Beauty > Premium Men's Grooming > Premium Colognes",
-        "count": 62
-    }
+  {
+    "value": "Metal Products",
+    "count": 100
+  },
+  {
+    "value": "Paper Products",
+    "count": 100
+  },
+
+  {
+    "value": "Electronic Waste Products",
+    "count": 100
+  },
+  {
+    "value": "Glass Products",
+    "count": 100
+  },
+  {
+    "value": "Textile Products",
+    "count": 100
+  },
+  {
+    "value": "Wood Products",
+    "count": 100
+  },
+  {
+    "value": "Plastic Product",
+    "count": 100
+  },
+  {
+    "value": "Mixed Products",
+    "count": 100
+  },
+  {
+    "value": "Personal Care > Bath & Body > Hand Soaps",
+    "count": 138
+  },
+  {
+    "value": "Premium Beauty > Premium Makeup > Premium Nail Polish & Care > Premium Nail Polish",
+    "count": 136
+  },
+
+  {
+    "value": "Beauty > Makeup > Nails",
+    "count": 105
+  },
+  {
+    "value": "Personal Care > Incontinence > All Incontinence",
+    "count": 105
+  },
+
+  {
+    "value": "Personal Care > Feminine Care > All Feminine Care",
+    "count": 79
+  },
+  {
+    "value": "Health > Aromatherapy > Aromatherapy",
+    "count": 74
+  },
+  {
+    "value": "Personal Care > Sun Care > Sunscreen",
+    "count": 72
+  },
+  {
+    "value": "Premium Beauty > Premium Men's Grooming > Premium Colognes",
+    "count": 62
+  }
 ]

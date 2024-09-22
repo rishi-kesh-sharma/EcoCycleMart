@@ -21,6 +21,14 @@ router.post(
         return next(new ErrorHandler("User already exists", 400));
       }
 
+      if (!req.body.avatar) {
+        next(new ErrorHandler("Profile image is required", 400));
+      }
+
+      if (!req.body.qrCode) {
+        next(new ErrorHandler("Qr image is required", 400));
+      }
+
       const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
         folder: "avatars",
       });
